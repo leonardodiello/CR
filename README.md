@@ -10,7 +10,7 @@
 
 # Sobre o Projeto
 
-Este repositório contém o **projeto final do curso "Introdução à Python para Ciência de Dados (40 horas)"**, realizado no contexto do projeto **Aranouá**.
+Este repositório contém o **projeto final do curso "Introdução à Python para Ciência de Dados (40h)"**, realizado no contexto do projeto **Aranouá**.
 
 O objetivo do projeto é consolidar os principais fundamentos de Python aplicados à análise de dados, incluindo manipulação, exploração e interpretação de informações.
 
