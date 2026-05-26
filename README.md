@@ -51,14 +51,4 @@ Durante o desenvolvimento, foram praticados conceitos essenciais para a área de
 - Visual Studio Code
 - Git e GitHub
 
----
 
-# Estrutura do Projeto
-
-```bash id="cr_struct_01"
-CR/
-│
-├── arquivos do curso (.py ou .ipynb)
-├── exercícios resolvidos
-├── anotações
-└── README.md
