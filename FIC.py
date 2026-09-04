@@ -1,22 +1,74 @@
-print("Esse é um programa que ajuda você a calcular o seu Coeficiente de Rendimento.")
+import streamlit as st
 
-nota_cont=0
-ch=0
+st.set_page_config(
+    page_title="Calculadora de CR",
+    page_icon=":bar_chart:",
+    layout="wide"
+)
 
-qtd_materia=int(input("Quantas matérias você tem? "))
+st.title("Calculadora de CR")
+st.write("Calcule seu Coeficiente de Rendimento de forma simples.")
+
+qtd_materia = st.number_input(
+    "Quantas matérias você tem?",
+    min_value=1,
+    step=1
+)
+
+nota_cont = 0.0
+ch = 0
 
 for i in range(qtd_materia):
-    nota= float(input(f"Digite a média da {i+1}ª matéria: "))
-    mat= int(input(f"Digite a carga horária da {i+1}ª matéria: "))
-    nota_cont += nota*mat
-    ch += mat
+    st.subheader(f"Matéria {i + 1}")
 
-periodo=(input("Esse é o seu primeiro período? (S/N) ").upper())
+    col1, col2 = st.columns(2)
 
-if(periodo=="S"):
-    calc = nota_cont / ch
+    with col1:
+        nota = st.number_input(
+            f"Média da {i + 1}ª matéria",
+            min_value=0.0,
+            max_value=10.0,
+            step=0.1,
+            key=f"nota_{i}"
+        )
+
+    with col2:
+        carga_horaria = st.number_input(
+            f"Carga horária da {i + 1}ª matéria",
+            min_value=1,
+            step=1,
+            key=f"ch_{i}"
+        )
+
+    nota_cont += nota * carga_horaria
+    ch += carga_horaria
+
+st.divider()
+
+periodo = st.radio(
+    "Esse é o seu primeiro período?",
+    ["Sim", "Não"]
+)
+
+if periodo == "Sim":
+
+    if ch > 0:
+        cr = nota_cont / ch
+
 else:
-    cr_antigo=float(input("Digite o seu CR antigo: "))
-    calc = ((nota_cont / ch)+cr_antigo)/2
-    
-print("CR atual:", round(calc,2))
+
+    cr_antigo = st.number_input(
+        "Digite seu CR antigo",
+        min_value=0.0,
+        max_value=10.0,
+        step=0.1
+    )
+
+    cr = ((nota_cont / ch) + cr_antigo) / 2
+
+st.divider()
+
+st.metric(
+    label="CR Atual",
+    value=f"{cr:.2f}"
+)
