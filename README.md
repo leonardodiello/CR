@@ -8,9 +8,9 @@
 
 Este projeto consiste em uma **Calculadora de Coeficiente de Rendimento (CR)** desenvolvida em Python.
 
-A aplicação permite informar as disciplinas cursadas, suas respectivas notas e cargas horárias para calcular o Coeficiente de Rendimento do período.
+A aplicação permite informar as disciplinas cursadas, suas respectivas notas e cargas horárias para calcular o Coeficiente de Rendimento do estudante.
 
-O projeto foi desenvolvido como parte dos estudos de **Introdução à Python para Ciência de Dados**, aplicando conceitos fundamentais de programação e lógica.
+O projeto foi desenvolvido como parte do **Projeto Aranouá**, uma iniciativa realizada em parceria com o **Instituto Federal do Amazonas (IFAM)**, no contexto do curso **Introdução à Python para Ciência de Dados**, com carga horária de 40 horas.
 
 ## Funcionalidades
 
@@ -107,6 +107,12 @@ Durante o desenvolvimento foram aplicados conceitos fundamentais de Python, incl
 * Operações matemáticas.
 * Média ponderada.
 * Lógica de programação.
+
+## Projeto Aranouá
+
+O projeto faz parte das atividades desenvolvidas no **Projeto Aranouá**, que contribuiu para o desenvolvimento dos meus conhecimentos em programação e Ciência de Dados.
+
+Através do curso de **Introdução à Python para Ciência de Dados**, foram trabalhados conceitos fundamentais da linguagem Python e sua aplicação na resolução de problemas.
 
 ## Objetivo
 
